@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/question_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -40,11 +41,10 @@ class _HomePageState extends State<HomePage> {
                 height: 30,
               ),
               OutlinedButton.icon(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: Colors.white
-                  
-                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const QuestionScreen()));
+                },
+                style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
                 icon: const Icon(Icons.arrow_right_alt_rounded),
                 label: const Text("Start Quiz",
                     style: TextStyle(color: Colors.white)),
